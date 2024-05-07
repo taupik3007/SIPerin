@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('corp', function (Blueprint $table) {
-            $table->bigIncrements('crp_id');
-            $table->string('crp_name');
-            $table->string('crp_sector');
-            $table->string('crp_corp_image');
+        Schema::create('corp_activity', function (Blueprint $table) {
+            $table->bigIncrements('crac_id');
+            $table->unsignedBigInteger('crac_corp_id');
+            $table->string('crac_activity_name');
+            $table->string('crac_activity_description');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('corp');
+        Schema::dropIfExists('corp_activity');
     }
 };

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('corp', function (Blueprint $table) {
-            $table->bigIncrements('crp_id');
-            $table->string('crp_name');
-            $table->string('crp_sector');
-            $table->string('crp_corp_image');
+        Schema::create('class_', function (Blueprint $table) {
+            $table->bigIncrements('cls_id');
+            $table->unsignedBigInteger('cls_major_id');
+            $table->string('cls_level');
+            $table->biginteger('cls_number');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('corp');
+        Schema::dropIfExists('class_');
     }
 };

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('corp', function (Blueprint $table) {
-            $table->bigIncrements('crp_id');
-            $table->string('crp_name');
-            $table->string('crp_sector');
-            $table->string('crp_corp_image');
+        Schema::create('user_document', function (Blueprint $table) {
+            $table->bigIncrements('usdc_id');
+            $table->unsignedBigInteger('usdc_user_id');
+            $table->string('usdc_name');
+            $table->string('usdc_file');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('corp');
+        Schema::dropIfExists('user_document');
     }
 };
