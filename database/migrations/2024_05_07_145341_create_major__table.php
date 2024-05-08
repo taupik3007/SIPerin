@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('major_', function (Blueprint $table) {
+        Schema::create('major', function (Blueprint $table) {
             $table->bigIncrements('mjr_id');
             $table->string('mjr_name');
             $table->timestamps();

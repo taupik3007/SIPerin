@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('corp_profile_', function (Blueprint $table) {
+        Schema::create('corp_profile', function (Blueprint $table) {
             $table->bigIncrements('crpp_id');
             $table->string('crpp_visi');
             $table->string('crpp_misi');
