@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('corp_profile', function (Blueprint $table) {
+        Schema::create('corp_profiles', function (Blueprint $table) {
             $table->bigIncrements('crpp_id');
             $table->string('crpp_visi');
             $table->string('crpp_misi');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('corp_profile');
+        Schema::dropIfExists('corp_profiles');
     }
 };
