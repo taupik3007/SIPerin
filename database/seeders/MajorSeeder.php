@@ -2,11 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Major;
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class MajorSeeder extends Seeder
 {
@@ -15,14 +13,14 @@ class MajorSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('major_')->insert([
-            'mjr_name'=> 'software engineering',
 
+        // User::factory(10)->create();
+
+        Major::create([
+            'mjr_name' => 'Software_engineering'
         ]);
-
-            DB::table('major_')->insert([
-                'mjr_name'=> 'multimedia',
-            ]);
-
+        Major::create([
+            'mjr_name' => 'Multimedia'
+        ]);
     }
 }

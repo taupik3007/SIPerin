@@ -11,9 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('major', function (Blueprint $table) {
-            $table->bigIncrements('mjr_id');
-            $table->string('mjr_name');
+        Schema::create('majors', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('major');
+        Schema::dropIfExists('majors');
     }
 };
