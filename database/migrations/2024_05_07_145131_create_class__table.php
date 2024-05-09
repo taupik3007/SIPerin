@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('cls_level');
             $table->biginteger('cls_number');
             $table->timestamps();
+
+            $table->foreign('cls_major_id')->references('mjr_id')->on('majors')->onDelete('cascade');
         });
     }
 

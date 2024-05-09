@@ -22,6 +22,8 @@ return new class extends Migration
             $table->biginteger('uspf_nis');
             $table->string('uspf_CV');
             $table->timestamps();
+
+            $table->foreign('uspf_user_id')->references('usr_id')->on('users')->onDelete('cascade');
         });
     }
 
