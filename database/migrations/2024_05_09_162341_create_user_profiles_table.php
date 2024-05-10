@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_profiles', function (Blueprint $table) {
+        Schema::create('user_profiles', function (Blueprint $table) {
             $table->bigIncrements('uspf_id');
             $table->unsignedBigInteger('uspf_user_id');
-            $table->string('uspf_name');
             $table->string('uspf_gender');
             $table->string('uspf_birth_place');
             $table->timestamp('uspf_date_of_birth');
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users_profiles');
+        Schema::dropIfExists('user_profiles');
     }
 };
