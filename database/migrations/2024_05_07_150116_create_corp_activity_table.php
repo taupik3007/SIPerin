@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('crac_activity_name');
             $table->string('crac_activity_description');
             $table->timestamps();
+
+            $table->foreign('crac_corp_id')->references('crp_id')->on('corps')->onDelete('cascade');
         });
     }
 

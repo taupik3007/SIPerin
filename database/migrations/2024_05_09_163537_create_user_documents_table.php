@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('usdc_name');
             $table->string('usdc_file');
             $table->timestamps();
+
+            $table->foreign('usdc_user_id')->references('usr_id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_document');
+        Schema::dropIfExists('user_documents');
     }
 };

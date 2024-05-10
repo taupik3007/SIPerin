@@ -5,7 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Corp_Major extends Model
+class ApplyCorp extends Model
 {
     use HasFactory;
+    protected $guarded = [
+        
+    ];
+
 }
