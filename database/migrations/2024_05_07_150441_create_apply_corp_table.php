@@ -17,6 +17,9 @@ return new class extends Migration
             $table->unsignedBigInteger('apcr_user_id');
             $table->string('apcr_status');
             $table->timestamps();
+
+            $table->foreign('apcr_corp_id')->references('crp_id')->on('corps')->onDelete('cascade');
+            $table->foreign('apcr_user_id')->references('usr_id')->on('users')->onDelete('cascade');
         });
     }
 

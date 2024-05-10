@@ -16,6 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('crmj_corp_id');
             $table->unsignedBigInteger('crmj_major_id');
             $table->timestamps();
+
+            $table->foreign('crmj_corp_id')->references('crp_id')->on('corps')->onDelete('cascade');
+            $table->foreign('crmj_major_id')->references('mjr_id')->on('majors')->onDelete('cascade');
         });
     }
 

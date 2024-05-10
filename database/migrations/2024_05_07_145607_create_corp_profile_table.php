@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('crpp_work_system');
             $table->string('crpp_address');
             $table->timestamps();
+
+            $table->foreign('crpp_corp_id')->references('crp_id')->on('corps')->onDelete('cascade');
         });
     }
 
