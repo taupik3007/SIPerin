@@ -24,7 +24,7 @@ class CorpQualificationSeeder extends Seeder
             'crqa_description' => 'harus mempunyai jiwa yang fokus dan konsentrasi',
         ]);
         CorpQualification::create([
-            'crqa_corp_id' => '4',
+            'crqa_corp_id' => '3',
             'crqa_name' => 'kualifikasi dan skil dasar',
             'crqa_description' => 'harus mempunyai jiwa yang kreatif dan memahami tools dari aplikasi blender',
         ]);
