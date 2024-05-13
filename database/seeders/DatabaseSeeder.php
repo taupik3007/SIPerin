@@ -20,8 +20,21 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
-            MajorSeeder::class,
-        ]);
+        $this->call(MajorSeeder::class);
+        $this->call(ClassSeeder::class);
+        $this->call(CorpSeeder::class);
+
+       $this->call(UserSeeder::class);
+        $this->call(UserDocumentSeeder::class);
+        $this->call(CorpProfileSeeder::class);
+        $this->call(CorpActivitySeeder::class);
+        $this->call(CorpMajorSeeder::class);
+        $this->call(CorpQualificationSeeder::class);
+        $this->call(UserProfileSeeder::class);
+        $this->call(ApplyCorpSeeder::class);
+
+        
+
+        
     }
 }
