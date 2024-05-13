@@ -10,12 +10,75 @@
         </div>
       </div>
       <!-- Sidebar navigation-->
+
+
+
       <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
         <ul id="sidebarnav">
+
+          <li class="sidebar-item">
+            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+              <span class="d-flex">
+                <i class="ti ti-file-text"></i>
+              </span>
+              <span class="hide-menu">Form Elements</span>
+            </a>
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item">
+                <a href="../main/form-inputs.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Forms Input</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../main/form-input-groups.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Input Groups</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../main/form-input-grid.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Input Grid</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../main/form-checkbox-radio.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Checkbox & Radios</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../main/form-bootstrap-switch.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Bootstrap Switch</span>
+                </a>
+              </li>
+              <li class="sidebar-item">
+                <a href="../main/form-select2.html" class="sidebar-link">
+                  <div class="round-16 d-flex align-items-center justify-content-center">
+                    <i class="ti ti-circle"></i>
+                  </div>
+                  <span class="hide-menu">Select2</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Home</span>
           </li>
+          
           <li class="sidebar-item">
             <a class="sidebar-link" href="./index.html" aria-expanded="false">
               <span>

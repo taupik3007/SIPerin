@@ -12,7 +12,7 @@ class CorpController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.corp.index');
     }
 
     /**
