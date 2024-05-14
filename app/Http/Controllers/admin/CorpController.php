@@ -5,6 +5,9 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Corp;
+
+use DataTables;
 
 
 class CorpController extends Controller
@@ -14,16 +17,20 @@ class CorpController extends Controller
      */
     public function index(Request $request)
     {
-        // dd($request->ajax());
-        // $users = User::all();
-        //     dd($users);
         if ($request->ajax()) {
-            $users = GG::all();
-            // dd($users);
-            return datatables()->of($users)
-                ->make(true);
+            $corp = Corp::select('*');
+            
+            return Datatables::of($corp)
+
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+                // dd($corp);
+                $actionBtn = '<a href="/admin/corp/'.$row->crp_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                return $actionBtn;
+            })
+            ->rawColumns(['action'])
+            ->make(true);
         }
-        // dd($request->ajax());
 
         return view('admin.corp.index');
     }

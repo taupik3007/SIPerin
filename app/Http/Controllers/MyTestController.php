@@ -21,6 +21,6 @@ class MyTestController extends Controller
                 ->make(true);
         }
           
-        return view('y-dataTables');
+        return view('admin.corp.index');
     }
 }
