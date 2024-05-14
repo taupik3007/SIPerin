@@ -5,6 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CorpController;
 
 
+
+use App\Http\Controllers\MyTestController;
+  
+Route::get('list', [MyTestController::class, 'dataTableLogic']);
+
+
 Route::get('/coba', function(){
     return view('admin.home');
 });

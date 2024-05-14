@@ -4,14 +4,27 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class CorpController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        // dd($request->ajax());
+        // $users = User::all();
+        //     dd($users);
+        if ($request->ajax()) {
+            $users = GG::all();
+            // dd($users);
+            return datatables()->of($users)
+                ->make(true);
+        }
+        // dd($request->ajax());
+
         return view('admin.corp.index');
     }
 
