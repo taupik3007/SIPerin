@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CorpProfile extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'crpp_id';
     protected $guarded = [
         
     ];

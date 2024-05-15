@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('corp_profiles', function (Blueprint $table) {
             $table->bigIncrements('crpp_id');
-            $table->string('crpp_visi');
-            $table->string('crpp_misi');
-            $table->string('crpp_description');
+            $table->string('crpp_visi')->nullable();
+            $table->string('crpp_misi')->nullable();
+            $table->string('crpp_description')->nullable();
             $table->unsignedBigInteger('crpp_corp_id');
-            $table->string('crpp_method');
-            $table->string('crpp_work_system');
-            $table->string('crpp_address');
+            $table->string('crpp_method')->nullable();
+            $table->string('crpp_work_system')->nullable();
+            $table->string('crpp_address')->nullable();
             $table->timestamps();
 
             $table->foreign('crpp_corp_id')->references('crp_id')->on('corps')->onDelete('cascade');

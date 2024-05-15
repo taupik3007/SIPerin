@@ -22,19 +22,19 @@
             <div class="card-body">
             <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
                 <div class="mb-3 mb-sm-0">
-                <h5 class="card-title fw-semibold">Sales Overview</h5>
+                <h5 class="card-title fw-semibold">Daftar Perusahaan</h5>
                 </div>
                 <div>
-                
+                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah Perushaan</a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
                 <thead>
                    <tr>
-                      <th>Id</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Email</th>
+                      <th>no</th>
+                      <th>Nama Perusahaan</th>
+                      <th>Bidang</th>
+                      <th>Action</th>
 
                       
                    </tr>
@@ -52,7 +52,7 @@
             serverSide: true,
             ajax: "{{ url('admin/corp') }}",
             columns: [
-                     { data: 'crp_id', name: 'crp_id' },
+                     { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
                      { data: 'crp_name', name: 'crp_name' },
                      { data: 'crp_sector', name: 'crp_sector' },
                      {data: 'action', name: 'action', orderable: false, searchable: false},

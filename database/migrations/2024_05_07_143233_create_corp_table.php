@@ -15,7 +15,7 @@ return new class extends Migration
             $table->bigIncrements('crp_id');
             $table->string('crp_name');
             $table->string('crp_sector');
-            $table->string('crp_corp_image');
+            $table->string('crp_corp_image')->nullable();
             $table->timestamps();
         });
     }
