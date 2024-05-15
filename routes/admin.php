@@ -28,3 +28,4 @@ Route::get('/admin/corp/{id}/destroy',[CorpController::class, 'destroy'])->name(
 
 
 
+

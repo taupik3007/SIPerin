@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Corp;
 use App\Models\CorpProfile;
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 use DataTables;
@@ -72,7 +73,7 @@ class CorpController extends Controller
             'crpp_corp_id'      => $corp->id,
             'crpp_work_system'  => $request->crpp_work_sytem
         ]);
-
+        Alert::success('Success Title', 'Success Message');
         return redirect(route('admin.corp.index'));
 
     }

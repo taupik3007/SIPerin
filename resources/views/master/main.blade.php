@@ -17,5 +17,6 @@
             </div>
             </div>
        </div>
+       @include('sweetalert::alert')
 
        @include('master.script')
