@@ -89,30 +89,30 @@
           </li>
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-            <span class="hide-menu">UI COMPONENTS</span>
+            <span class="hide-menu">FITUR APLIKASI</span>
           </li>
           <li class="sidebar-item">
             <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
               <span>
-                <i class="ti ti-article"></i>
+                <i class="ti ti-bookmark"></i>
               </span>
-              <span class="hide-menu">Buttons</span>
+              <span class="hide-menu">Kelola Perusahaan</span>
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
               <span>
-                <i class="ti ti-alert-circle"></i>
+                <i class="ti ti-files"></i>
               </span>
-              <span class="hide-menu">Alerts</span>
+              <span class="hide-menu">Kelola Siswa</span>
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
               <span>
-                <i class="ti ti-cards"></i>
+                <i class="ti ti-user"></i>
               </span>
-              <span class="hide-menu">Card</span>
+              <span class="hide-menu">Kelola Mentor</span>
             </a>
           </li>
           <li class="sidebar-item">
@@ -120,28 +120,40 @@
               <span>
                 <i class="ti ti-file-description"></i>
               </span>
-              <span class="hide-menu">Forms</span>
+              <span class="hide-menu">Kelola Jurusan</span>
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+            <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
               <span>
-                <i class="ti ti-typography"></i>
+                <i class="ti ti-world"></i>
               </span>
-              <span class="hide-menu">Typography</span>
+              <span class="hide-menu">Kelola Kelas</span>
             </a>
           </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+              <span>
+                <i class="ti ti-cards"></i>
+              </span>
+              <span class="hide-menu">Kelola Penerimaan</span>
+            </a>
+          </li>
+          
+      
           <li class="nav-small-cap">
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">AUTH</span>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+            <form action="{{ route('logout')}}" method="post" id="form1">
+            @csrf
+            <a class="sidebar-link" href="javascript:;" onclick="document.getElementById('form1').submit();" aria-expanded="false">
               <span>
                 <i class="ti ti-login"></i>
               </span>
-              <span class="hide-menu">Login</span>
-            </a>
+              <span class="hide-menu">Logout</span>
+</a>
           </li>
           <li class="sidebar-item">
             <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
