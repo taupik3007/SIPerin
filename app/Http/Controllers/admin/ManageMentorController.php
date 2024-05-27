@@ -12,7 +12,7 @@ class ManageMentorController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.mentor.index');
     }
 
     /**
