@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Major;
-
+use RealRashid\SweetAlert\Facades\Alert;
 use DataTables;
 class ManageMajorController extends Controller
 {
@@ -39,7 +39,7 @@ class ManageMajorController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.major.create');
     }
 
     /**
@@ -47,7 +47,26 @@ class ManageMajorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $messages = [
+            'required'  => 'Harap di isi.',
+           
+        ];
+        $validated = $request->validate([
+            'mjr_name'          => 'required|max:255',
+            
+            
+        ],$messages
+        );
+        // dd($request);
+
+        $corp = Major::create([
+            'mjr_name'      => $request->mjr_name,
+           
+        ]);
+        // dd($corp);
+       
+        Alert::success('Berhasil', 'Berhasil Menambah jurusan');
+        return redirect(route('admin.major.index'));
     }
 
     /**

@@ -25,7 +25,7 @@
                 <h5 class="card-title fw-semibold">Daftar Perusahaan</h5>
                 </div>
                 <div>
-                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah jurusan </a>
+                    <a href="/admin/major/create" class="btn btn-sm btn-primary">Tambah jurusan </a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
