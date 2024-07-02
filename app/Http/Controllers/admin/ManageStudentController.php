@@ -4,6 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ManageStudentController extends Controller
 {
@@ -12,7 +14,7 @@ class ManageStudentController extends Controller
      */
     public function index()
     {
-        //
+        return view ('admin.user.index');
     }
 
     /**

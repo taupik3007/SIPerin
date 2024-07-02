@@ -35,7 +35,9 @@
             <span class="hide-menu">FITUR APLIKASI</span>
           </li>
           <li class="sidebar-item">
+
             <a class="sidebar-link" href="/admin/corp" aria-expanded="false">
+
               <span>
                 <i class="ti ti-bookmark"></i>
               </span>
@@ -43,7 +45,9 @@
             </a>
           </li>
           <li class="sidebar-item">
+
             <a class="sidebar-link" href="/admin/student" aria-expanded="false">
+
               <span>
                 <i class="ti ti-files"></i>
               </span>
@@ -51,7 +55,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
+            <a class="sidebar-link" href="./mentor" aria-expanded="false">
               <span>
                 <i class="ti ti-user"></i>
               </span>
@@ -59,7 +63,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
+            <a class="sidebar-link" href="./major" aria-expanded="false">
               <span>
                 <i class="ti ti-file-description"></i>
               </span>
@@ -67,7 +71,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
+            <a class="sidebar-link" href="./class" aria-expanded="false">
               <span>
                 <i class="ti ti-world"></i>
               </span>
@@ -75,7 +79,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+            <a class="sidebar-link" href="./apply" aria-expanded="false">
               <span>
                 <i class="ti ti-cards"></i>
               </span>

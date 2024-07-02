@@ -12,7 +12,7 @@ class ManageMajorController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.major.index');
     }
 
     /**
