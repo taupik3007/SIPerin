@@ -21,7 +21,7 @@ class CorpController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $corp = Corp::select('*');
+            $corp = Corp::all();
             
             return Datatables::of($corp)
             // ->removeColumn('usr_id')

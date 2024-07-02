@@ -25,15 +25,15 @@
                 <h5 class="card-title fw-semibold">Daftar Perusahaan</h5>
                 </div>
                 <div>
-                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah Perushaan</a>
+                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah jurusan </a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
                 <thead>
                    <tr>
                       <th>no</th>
-                      <th>Nama Perusahaan</th>
-                      <th>Bidang</th>
+                      <th>Nama Jurusan </th>
+               
                       <th>Action</th>
 
                       
@@ -53,8 +53,7 @@
             ajax: "{{ url()->current() }}",
             columns: [
                      { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
-                     { data: 'crp_name', name: 'crp_name' },
-                     { data: 'crp_sector', name: 'crp_sector' },
+                     { data: 'mjr_name', name: 'mjr_name' },
                      {data: 'action', name: 'action', orderable: false, searchable: false},
                   ]
          });
