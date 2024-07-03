@@ -71,7 +71,7 @@
             </a>
           </li>
           <li class="sidebar-item">
-            <a class="sidebar-link" href="./class" aria-expanded="false">
+            <a class="sidebar-link" href="/admin/class" aria-expanded="false">
               <span>
                 <i class="ti ti-world"></i>
               </span>

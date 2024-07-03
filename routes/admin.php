@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CorpController;
 use App\Http\Controllers\admin\ManageStudentController;
 use App\Http\Controllers\admin\ManageMajorController;
+use App\Http\Controllers\admin\ManageClassController;
+
 
 
 
@@ -42,7 +44,12 @@ Route::post('/admin/major/{id}/update',[ManageMajorController::class, 'update'])
 Route::delete('/admin/major/{id}/destroy',[ManageMajorController::class, 'destroy'])->name('admin.major.destroy');
 
 
-
+Route::get('/admin/class',[ManageClassController::class, 'index'])->name('admin.Class.index');
+Route::get('/admin/class/create',[ManageClassController::class, 'create'])->name('admin.Class.create');
+Route::post('/admin/class/create',[ManageClassController::class, 'store'])->name('admin.Class.store');
+Route::get('/admin/class/{id}/edit',[ManageClassrController::class, 'edit'])->name('admin.Class.edit');
+Route::post('/admin/class/{id}/update',[ManageClassController::class, 'update'])->name('admin.Class.update');
+Route::delete('/admin/class/{id}/destroy',[ManageClassController::class, 'destroy'])->name('admin.Class.destroy');
 
 
 

@@ -4,14 +4,48 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Classes;
+use RealRashid\SweetAlert\Facades\Alert;
+use DataTables;
 
 class ManageClassController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(request $request)
     {
+
+        // $class= Classes::with('cls_major')->get();
+        // dd($class);
+
+        if ($request->ajax()) {
+            $class = Classes::with('cls_major')->get();
+            
+            return Datatables::of($class)
+            // ->removeColumn('usr_id')
+            ->addIndexColumn()
+            ->addColumn('major', function($row){
+                // dd($corp);
+                $actionBtn = $row->cls_major->mjr_name;
+                return $actionBtn;
+            })
+            ->rawColumns(['major'])
+            ->addColumn('action', function($row){
+                // dd($corp);
+                $actionBtn = '<a href="/admin/major/'.$row->cls_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="/admin/major/'.$row->cls_id.'/destroy" class="btn btn-danger btn-sm" data-confirm-delete="true">Hapus</a> 
+                ';
+                return $actionBtn;
+            })
+            ->rawColumns(['action'])
+            
+            ->make(true);
+        }
+        $title = 'Hapus Jurusan!';
+        $text = "Yakin Menghapus Jurusan?";
+        confirmDelete($title, $text);
+
+       
         return view('admin.class.index');
     }
 
