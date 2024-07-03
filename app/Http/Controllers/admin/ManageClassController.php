@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Classes;
+use App\Models\User;
+
 use RealRashid\SweetAlert\Facades\Alert;
 use DataTables;
 
@@ -33,7 +35,7 @@ class ManageClassController extends Controller
             ->rawColumns(['major'])
             ->addColumn('action', function($row){
                 // dd($corp);
-                $actionBtn = '<a href="/admin/major/'.$row->cls_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="/admin/major/'.$row->cls_id.'/destroy" class="btn btn-danger btn-sm" data-confirm-delete="true">Hapus</a> 
+                $actionBtn = '<a href="/admin/class/'.$row->cls_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="/admin/class/'.$row->cls_id.'/destroy" class="btn btn-danger btn-sm" data-confirm-delete="true">Hapus</a> 
                 ';
                 return $actionBtn;
             })
@@ -94,6 +96,14 @@ class ManageClassController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $userCheck = User::where('usr_class_id',$id)->first();
+        if($userCheck){
+            Alert::error('Gagal Menghapus', 'Masih Ada Siswa Yang Pada kelas');
+            return redirect(route('admin.class.index'));
+        }
+
+        $class = Classes::findOrFail($id)->delete();
+        Alert::success('berhasi Menghapus', 'kelas Berhasil Dihapus');
+        return redirect(route('admin.class.index'));
     }
 }
