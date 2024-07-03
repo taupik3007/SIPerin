@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Major extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'mjr_id';
+
     protected $guarded = [
         
     ];

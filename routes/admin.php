@@ -39,7 +39,7 @@ Route::get('/admin/major/create',[ManageMajorController::class, 'create'])->name
 Route::post('/admin/major/create',[ManageMajorController::class, 'store'])->name('admin.major.store');
 Route::get('/admin/major/{id}/edit',[ManageMajorController::class, 'edit'])->name('admin.major.edit');
 Route::post('/admin/major/{id}/update',[ManageMajorController::class, 'update'])->name('admin.major.update');
-Route::get('/admin/major/{id}/destroy',[ManageMajorController::class, 'destroy'])->name('admin.major.destroy');
+Route::delete('/admin/major/{id}/destroy',[ManageMajorController::class, 'destroy'])->name('admin.major.destroy');
 
 
 

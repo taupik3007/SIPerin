@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Major;
+use App\Models\Classes;
+
 use RealRashid\SweetAlert\Facades\Alert;
 use DataTables;
 class ManageMajorController extends Controller
@@ -24,12 +26,16 @@ class ManageMajorController extends Controller
             ->addIndexColumn()
             ->addColumn('action', function($row){
                 // dd($corp);
-                $actionBtn = '<a href="/admin/corp/'.$row->mjr_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                $actionBtn = '<a href="/admin/major/'.$row->mjr_id.'/edit" class="edit btn btn-success btn-sm">Edit</a> <a href="/admin/major/'.$row->mjr_id.'/destroy" class="btn btn-danger btn-sm" data-confirm-delete="true">Hapus</a> 
+                ';
                 return $actionBtn;
             })
             ->rawColumns(['action'])
             ->make(true);
         }
+        $title = 'Hapus Jurusan!';
+        $text = "Yakin Menghapus Jurusan?";
+        confirmDelete($title, $text);
 
         return view('admin.major.index');
     }
@@ -98,6 +104,14 @@ class ManageMajorController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $classCheck = Classes::where('cls_major_id',$id)->first();
+        if($classCheck){
+            Alert::error('Gagal Menghapus', 'Masih Ada Kelas Yang Pada Jurusan');
+            return redirect(route('admin.major.index'));
+        }
+
+        $major = Major::findOrFail($id)->delete();
+        Alert::success('berhasi Menghapus', 'Jurusan Berhasil Dihapus');
+        return redirect(route('admin.major.index'));
     }
 }

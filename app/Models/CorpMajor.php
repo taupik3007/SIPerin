@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CorpMajor extends Model
 {
     use HasFactory;
+    protected $primaryKet = 'mjr_id';
     protected $guarded = [
         
     ];
