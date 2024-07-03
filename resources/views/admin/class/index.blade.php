@@ -22,18 +22,19 @@
             <div class="card-body">
             <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
                 <div class="mb-3 mb-sm-0">
-                <h5 class="card-title fw-semibold">Daftar jurusan</h5>
+                <h5 class="card-title fw-semibold">Daftar kelas</h5>
                 </div>
                 <div>
-                    <a href="/admin/major/create" class="btn btn-sm btn-primary">Tambah jurusan </a>
+                    <a href="/admin/major/create" class="btn btn-sm btn-primary">Tambah kelas </a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
                 <thead>
                    <tr>
                       <th>no</th>
-                      <th>Nama Jurusan </th>
-               
+                      <th>Tingkat </th>
+                      <th>Jurusan</th>
+                      <th>Nomor Kelas</th>
                       <th>Action</th>
 
                       
@@ -57,7 +58,9 @@
             ajax: "{{ url()->current() }}",
             columns: [
                      { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
-                     { data: 'mjr_name', name: 'mjr_name' },
+                     { data: 'cls_level', name: 'cls_leve' },
+                     { data: 'major', name: 'major' },
+                     { data: 'cls_number', name: 'cls_number' },
                      {data: 'action', name: 'action', orderable: false, searchable: false},
                   ]
          });
