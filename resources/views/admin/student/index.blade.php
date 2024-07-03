@@ -32,8 +32,8 @@
                 <thead>
                    <tr>
                       <th>no</th>
-                      <th>Nama Perusahaan</th>
-                      <th>Bidang</th>
+                      <th>Nama Siswa</th>
+                      <th>Email</th>
                       <th>Action</th>
 
                       
@@ -45,4 +45,19 @@
     </div>
 
 </div>
+<script>
+    $(document).ready( function () {
+     $('#y_dataTables').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: "{{ url()->current() }}",
+            columns: [
+                     { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
+                     { data: 'name', name: 'name' },
+                     { data: 'email', name: 'email' },
+                     {data: 'action', name: 'action', orderable: false, searchable: false},
+                  ]
+         });
+      });
+   </script>
 @endsection
