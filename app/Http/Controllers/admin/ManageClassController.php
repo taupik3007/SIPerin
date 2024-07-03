@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Classes;
 use App\Models\User;
+use App\Models\Major;
+use App\Http\Controllers\admin\ManageMajorController;
 
 use RealRashid\SweetAlert\Facades\Alert;
 use DataTables;
@@ -56,7 +58,9 @@ class ManageClassController extends Controller
      */
     public function create()
     {
-        //
+        $major = Major::all();
+        return view('admin.class.create', compact('major'));
+
     }
 
     /**
@@ -64,7 +68,16 @@ class ManageClassController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        // dd($request);
+
+        $class = Classes::create([
+            'cls_level'     => $request->cls_level,
+            'cls_major_id'  => $request->mjr_id,
+            'cls_number'    => $request->cls_number
+        ]);
+        Alert::success('Success Title', 'Berhasil menambah kelas');
+        return redirect(route('admin.class.index'));
     }
 
     /**

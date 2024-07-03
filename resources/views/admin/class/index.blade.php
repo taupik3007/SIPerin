@@ -25,7 +25,7 @@
                 <h5 class="card-title fw-semibold">Daftar kelas</h5>
                 </div>
                 <div>
-                    <a href="/admin/major/create" class="btn btn-sm btn-primary">Tambah kelas </a>
+                    <a href="/admin/class/create" class="btn btn-sm btn-primary">Tambah kelas </a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
