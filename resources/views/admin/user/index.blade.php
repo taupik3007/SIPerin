@@ -22,10 +22,10 @@
             <div class="card-body">
             <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
                 <div class="mb-3 mb-sm-0">
-                <h5 class="card-title fw-semibold">Daftar Perusahaan</h5>
+                <h5 class="card-title fw-semibold">Daftar Siswa</h5>
                 </div>
                 <div>
-                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah Perushaan</a>
+                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah Siswa</a>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
