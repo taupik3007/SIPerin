@@ -22,18 +22,15 @@
             <div class="card-body">
             <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
                 <div class="mb-3 mb-sm-0">
-                <h5 class="card-title fw-semibold">Daftar</h5>
-                </div>
-                <div>
-                    <a href="/admin/corp/create" class="btn btn-sm btn-primary">Tambah Perushaan</a>
+                <h5 class="card-title fw-semibold">Daftar Mentor</h5>
                 </div>
             </div>
             <table class="table table-bordered" id="y_dataTables">
                 <thead>
                    <tr>
                       <th>no</th>
-                      <th>Nama Perusahaan</th>
-                      <th>Bidang</th>
+                      <th>Nama Mentor</th>
+                      <th>Email</th>
                       <th>Action</th>
 
                       
@@ -53,8 +50,8 @@
             ajax: "{{ url()->current() }}",
             columns: [
                      { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false, searchable: false },
-                     { data: 'crp_name', name: 'crp_name' },
-                     { data: 'crp_sector', name: 'crp_sector' },
+                     { data: 'name', name: 'name' },
+                     { data: 'email', name: 'email' },
                      {data: 'action', name: 'action', orderable: false, searchable: false},
                   ]
          });

@@ -37,7 +37,7 @@ class ManageStudentController extends Controller
         $text = "Yakin Menghapus Siswa?";
         confirmDelete($title, $text);
 
-        return view ('admin.student.index');
+        return view ('admin.user.index');
     }
 
     /**

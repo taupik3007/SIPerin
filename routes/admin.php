@@ -6,7 +6,7 @@ use App\Http\Controllers\admin\CorpController;
 use App\Http\Controllers\admin\ManageStudentController;
 use App\Http\Controllers\admin\ManageMajorController;
 use App\Http\Controllers\admin\ManageClassController;
-
+use App\Http\Controllers\admin\ManageMentorController;
 
 
 
@@ -51,5 +51,10 @@ Route::get('/admin/class/{id}/edit',[ManageClassrController::class, 'edit'])->na
 Route::post('/admin/class/{id}/update',[ManageClassController::class, 'update'])->name('admin.class.update');
 Route::delete('/admin/class/{id}/destroy',[ManageClassController::class, 'destroy'])->name('admin.class.destroy');
 
-
+Route::get('/admin/mentor',[ManageMentorController::class, 'index'])->name('admin.mentor.index');
+Route::get('/admin/mentor/create',[ManageMentorController::class, 'create'])->name('admin.mentor.create');
+Route::post('/admin/mentor/create',[ManageMentorController::class, 'store'])->name('admin.mentor.store');
+Route::get('/admin/mentor/{id}/edit',[ManageMentorController::class, 'edit'])->name('admin.mentor.edit');
+Route::post('/admin/mentor/{id}/update',[ManageMentorController::class, 'update'])->name('admin.mentor.update');
+Route::delete('/admin/mentor/{id}/destroy',[ManageMentorController::class, 'destroy'])->name('admin.mentor.destroy');
 
